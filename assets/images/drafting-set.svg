@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E4E4E7"/>
+      <stop offset="50%" stop-color="#A1A1AA"/>
+      <stop offset="100%" stop-color="#71717A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#F4F4F5"/>
+  <!-- Velvet Case -->
+  <rect x="180" y="80" width="440" height="440" rx="16" fill="#18181B" stroke="#27272A" stroke-width="4"/>
+  <rect x="196" y="96" width="408" height="408" rx="10" fill="#09090B"/>
+  <!-- Compass -->
+  <g transform="translate(320, 140)">
+    <!-- Top hinge -->
+    <circle cx="80" cy="40" r="14" fill="url(#metal)" stroke="#3F3F46" stroke-width="2"/>
+    <circle cx="80" cy="40" r="5" fill="#18181B"/>
+    <rect x="76" y="10" width="8" height="24" rx="2" fill="url(#metal)"/>
+    <!-- Left Leg -->
+    <path d="M74 48 L20 280 L28 280 L82 54 Z" fill="url(#metal)" stroke="#52525B" stroke-width="1.5"/>
+    <polygon points="18,280 22,310 24,280" fill="#27272A"/>
+    <!-- Right Leg with pencil holder -->
+    <path d="M86 48 L140 250 L132 250 L78 54 Z" fill="url(#metal)" stroke="#52525B" stroke-width="1.5"/>
+    <rect x="130" y="240" width="14" height="24" rx="2" fill="#D71920"/>
+    <polygon points="135,264 139,305 143,264" fill="#E4E4E7"/>
+    <polygon points="137,298 139,305 141,298" fill="#18181B"/>
+    <!-- Adjustment wheel -->
+    <rect x="52" y="140" width="56" height="6" rx="2" fill="url(#metal)"/>
+    <circle cx="80" cy="143" r="8" fill="#3F3F46"/>
+  </g>
+  <!-- Set Square / Triangle Ruler -->
+  <polygon points="230,460 380,460 230,310" fill="#38BDF8" fill-opacity="0.25" stroke="#0284C7" stroke-width="3"/>
+  <polygon points="255,445 340,445 255,360" fill="#09090B"/>
+  <!-- Protractor -->
+  <path d="M 420 460 A 70 70 0 0 1 560 460 Z" fill="#FBBF24" fill-opacity="0.2" stroke="#D97706" stroke-width="3"/>
+  <line x1="420" y1="460" x2="560" y2="460" stroke="#D97706" stroke-width="3"/>
+  <circle cx="490" cy="460" r="4" fill="#D97706"/>
+  <!-- Divider -->
+  <rect x="230" y="130" width="14" height="150" rx="4" fill="url(#metal)"/>
+</svg>

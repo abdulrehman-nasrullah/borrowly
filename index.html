@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrowly - Peer-to-Peer Rental Marketplace in Pakistan</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home" data-auth="guest">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Peer-to-Peer Rentals in Pakistan
+        </div>
+        <h1 class="hero__title">
+          Borrow What You Need.<br>
+          <span class="hero__title-accent">Lend What You Have.</span>
+        </h1>
+        <p class="hero__subtitle">
+          Rent everyday items directly from people in your city. Transparent daily prices in PKR, simple date-based requests, and direct cash or bank settlement.
+        </p>
+        <div class="hero__ctas">
+          <a href="#browse" class="btn btn--primary">Browse Items</a>
+          <a href="add-item.html" class="btn btn--outline-light">List an Item</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How Borrowly Works</h2>
+          <p class="section-header__subtitle">Three simple steps to borrow or lend items locally.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <article class="step-card">
+            <div class="step-card__number">01</div>
+            <h3 class="step-card__title">Find &amp; Request</h3>
+            <p class="step-card__text">
+              Browse listings across your city. Choose your required rental dates and send a dated request to the owner.
+            </p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="step-card">
+            <div class="step-card__number">02</div>
+            <h3 class="step-card__title">Owner Decision</h3>
+            <p class="step-card__text">
+              The owner reviews your dates and either accepts or rejects the request from their dashboard.
+            </p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="step-card">
+            <div class="step-card__number">03</div>
+            <h3 class="step-card__title">Meet &amp; Pay Directly</h3>
+            <p class="step-card__text">
+              Upon acceptance, both parties see each other's email to arrange pickup and settle the rental payment directly.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse Section -->
+    <section class="browse-section" id="browse">
+      <div class="container">
+        <div class="browse-controls">
+          <!-- Search input row -->
+          <div class="browse-search-row">
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <label for="browseSearchInput" class="sr-only">Search items</label>
+              <input type="text" id="browseSearchInput" class="form-input" placeholder="Search by item title, city, or neighborhood...">
+            </div>
+          </div>
+
+          <!-- Category filter bar -->
+          <div class="category-filter-bar" role="toolbar" aria-label="Filter items by category">
+            <button type="button" class="filter-pill is-active" data-category="all">All Categories</button>
+            <button type="button" class="filter-pill" data-category="Electronics and Calculators">Electronics &amp; Calculators</button>
+            <button type="button" class="filter-pill" data-category="Books and Study Material">Books &amp; Study Material</button>
+            <button type="button" class="filter-pill" data-category="Tools and Hardware">Tools &amp; Hardware</button>
+            <button type="button" class="filter-pill" data-category="Kitchen and Home">Kitchen &amp; Home</button>
+            <button type="button" class="filter-pill" data-category="Sports and Outdoor">Sports &amp; Outdoor</button>
+            <button type="button" class="filter-pill" data-category="Clothing and Accessories">Clothing &amp; Accessories</button>
+            <button type="button" class="filter-pill" data-category="Other">Other</button>
+          </div>
+        </div>
+
+        <!-- Results Header -->
+        <div class="browse-results-bar">
+          <div class="results-count" id="resultsCount">Showing 8 items</div>
+        </div>
+
+        <!-- 4/2/1 Responsive Item Grid -->
+        <div class="items-grid" id="itemsGrid">
+          <!-- Item 1: Casio fx-991EX -->
+          <article class="card" data-category="Electronics and Calculators" data-title="Casio fx-991EX Scientific Calculator" data-location="Multan, Gulgasht">
+            <div class="card__img-wrap">
+              <img src="assets/images/calculator.svg" alt="Casio fx-991EX Scientific Calculator" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Electronics and Calculators</span>
+              <h3 class="card__title">Casio fx-991EX Scientific Calculator</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Like New</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Multan, Gulgasht</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>20 Oct - 30 Nov 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 150 / day</span>
+                <span class="card__owner">Zainab M.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 2: Engineering Drafting Set -->
+          <article class="card" data-category="Books and Study Material" data-title="Engineering Drafting Set" data-location="Multan, Cantt">
+            <div class="card__img-wrap">
+              <img src="assets/images/drafting-set.svg" alt="Engineering Drafting Set" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Books and Study Material</span>
+              <h3 class="card__title">Engineering Drafting Set</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Good</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Multan, Cantt</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>22 Oct - 15 Nov 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 100 / day</span>
+                <span class="card__owner">Ahmed K.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 3: DeWalt 20V Cordless Drill -->
+          <article class="card" data-category="Tools and Hardware" data-title="DeWalt 20V Cordless Drill" data-location="Lahore, Johar Town">
+            <div class="card__img-wrap">
+              <img src="assets/images/cordless-drill.svg" alt="DeWalt 20V Cordless Drill" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Tools and Hardware</span>
+              <h3 class="card__title">DeWalt 20V Cordless Drill</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Good</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Lahore, Johar Town</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>20 Oct - 10 Dec 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 500 / day</span>
+                <span class="card__owner">Hamza S.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 4: Electric Rice Cooker 1.8L -->
+          <article class="card" data-category="Kitchen and Home" data-title="Electric Rice Cooker 1.8L" data-location="Karachi, Gulshan">
+            <div class="card__img-wrap">
+              <img src="assets/images/rice-cooker.svg" alt="Electric Rice Cooker 1.8L" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Kitchen and Home</span>
+              <h3 class="card__title">Electric Rice Cooker 1.8L</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Like New</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Karachi, Gulshan</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>25 Oct - 20 Nov 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 200 / day</span>
+                <span class="card__owner">Fatima A.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 5: Data Structures Textbook -->
+          <article class="card" data-category="Books and Study Material" data-title="Data Structures Textbook" data-location="Multan, Gulgasht">
+            <div class="card__img-wrap">
+              <img src="assets/images/textbook.svg" alt="Data Structures Textbook" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Books and Study Material</span>
+              <h3 class="card__title">Data Structures Textbook</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Fair</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Multan, Gulgasht</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>20 Oct - 30 Nov 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 80 / day</span>
+                <span class="card__owner">Bilal R.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 6: 4-Person Camping Tent -->
+          <article class="card" data-category="Sports and Outdoor" data-title="4-Person Camping Tent" data-location="Islamabad, F-10">
+            <div class="card__img-wrap">
+              <img src="assets/images/tent.svg" alt="4-Person Camping Tent" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Sports and Outdoor</span>
+              <h3 class="card__title">4-Person Camping Tent</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Good</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Islamabad, F-10</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>24 Oct - 15 Dec 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 700 / day</span>
+                <span class="card__owner">Usman T.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 7: Party Speaker 200W -->
+          <article class="card" data-category="Electronics and Calculators" data-title="Party Speaker 200W" data-location="Lahore, DHA">
+            <div class="card__img-wrap">
+              <img src="assets/images/speaker.svg" alt="Party Speaker 200W" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Electronics and Calculators</span>
+              <h3 class="card__title">Party Speaker 200W</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Good</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Lahore, DHA</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>21 Oct - 05 Nov 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 600 / day</span>
+                <span class="card__owner">Sana R.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <!-- Item 8: Aluminium Ladder 8ft -->
+          <article class="card" data-category="Tools and Hardware" data-title="Aluminium Ladder 8ft" data-location="Rawalpindi, Bahria">
+            <div class="card__img-wrap">
+              <img src="assets/images/ladder.svg" alt="Aluminium Ladder 8ft" class="card__img">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Tools and Hardware</span>
+              <h3 class="card__title">Aluminium Ladder 8ft</h3>
+              <div class="card__meta">
+                <div class="card__meta-item">
+                  <span class="badge badge--condition">Good</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Rawalpindi, Bahria</span>
+                </div>
+                <div class="card__meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>20 Oct - 28 Nov 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__price-box">
+                <span class="card__price">Rs. 300 / day</span>
+                <span class="card__owner">Imran H.</span>
+              </div>
+              <a href="item.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Empty state when search matches nothing -->
+        <div class="empty-state empty-state--browse" id="browseEmptyState">
+          <h3 class="empty-state__title">No items found</h3>
+          <p class="empty-state__text">Try adjusting your keyword or selecting a different category.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>

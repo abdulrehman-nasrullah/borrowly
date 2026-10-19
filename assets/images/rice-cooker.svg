@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F4F4F5"/>
+      <stop offset="100%" stop-color="#D4D4D8"/>
+    </linearGradient>
+    <linearGradient id="metallic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A1A1AA"/>
+      <stop offset="100%" stop-color="#71717A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#F4F4F5"/>
+  <g transform="translate(220, 100)">
+    <!-- Base feet -->
+    <rect x="60" y="380" width="40" height="16" rx="4" fill="#27272A"/>
+    <rect x="260" y="380" width="40" height="16" rx="4" fill="#27272A"/>
+    <!-- Main Body -->
+    <rect x="40" y="140" width="280" height="240" rx="36" fill="url(#body)" stroke="#E4E4E7" stroke-width="4"/>
+    <!-- Lid -->
+    <path d="M 30 140 Q 180 80 330 140 Z" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="4"/>
+    <!-- Lid Handle -->
+    <rect x="130" y="70" width="100" height="24" rx="8" fill="#27272A"/>
+    <path d="M 145 94 L 145 106 L 215 106 L 215 94 Z" fill="#27272A"/>
+    <!-- Steam vent -->
+    <ellipse cx="270" cy="115" rx="14" ry="6" fill="#71717A"/>
+    <!-- Front Control Panel -->
+    <rect x="100" y="200" width="160" height="140" rx="16" fill="#18181B"/>
+    <rect x="115" y="215" width="130" height="50" rx="8" fill="#27272A"/>
+    <text x="180" y="247" fill="#22C55E" font-family="monospace" font-size="20" font-weight="700" text-anchor="middle">WARM</text>
+    <!-- Indicator lights -->
+    <circle cx="140" cy="290" r="7" fill="#EF4444"/>
+    <text x="155" y="294" fill="#A1A1AA" font-family="'Inter', sans-serif" font-size="10">COOK</text>
+    <circle cx="205" cy="290" r="7" fill="#22C55E"/>
+    <text x="220" y="294" fill="#A1A1AA" font-family="'Inter', sans-serif" font-size="10">WARM</text>
+    <!-- Cook button -->
+    <rect x="135" y="315" width="90" height="16" rx="4" fill="#D71920"/>
+    <text x="180" y="327" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="9" font-weight="700" text-anchor="middle">START</text>
+    <!-- Side handles -->
+    <rect x="15" y="200" width="25" height="50" rx="8" fill="#3F3F46"/>
+    <rect x="320" y="200" width="25" height="50" rx="8" fill="#3F3F46"/>
+    <text x="180" y="175" fill="#71717A" font-family="'Barlow Condensed', sans-serif" font-size="16" font-weight="700" letter-spacing="1" text-anchor="middle">DELUXE 1.8L</text>
+  </g>
+</svg>

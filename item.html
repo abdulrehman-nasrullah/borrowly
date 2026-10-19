@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeWalt 20V Cordless Drill - Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="item" data-auth="user">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="item-page">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#browse">Tools and Hardware</a>
+        <span>/</span>
+        <span>DeWalt 20V Cordless Drill</span>
+      </nav>
+
+      <div class="item-layout">
+        <!-- Left: Item Photo, Specs & Description -->
+        <div>
+          <div class="item-gallery">
+            <div class="item-gallery__main">
+              <img src="assets/images/cordless-drill.svg" alt="DeWalt 20V Cordless Drill">
+            </div>
+          </div>
+
+          <div class="item-details-card">
+            <div class="item-header-meta">
+              <span class="card__category">Tools and Hardware</span>
+              <span class="badge badge--condition">Good</span>
+            </div>
+
+            <h1 class="item-title">DeWalt 20V Cordless Drill</h1>
+
+            <div class="item-meta-pills">
+              <div class="meta-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Lahore, Johar Town</span>
+              </div>
+              <div class="meta-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Available: 20 Oct - 10 Dec 2026</span>
+              </div>
+            </div>
+
+            <div class="item-description">
+              <h3>Description</h3>
+              <p>
+                Original DeWalt 20V Max brushless cordless compact drill driver with two lithium-ion batteries and fast charger. Perfect for home improvement projects, assembling furniture, woodwork, and light masonry drilling. Clean, tested, and ready for work.
+              </p>
+            </div>
+
+            <div class="owner-info-box">
+              <div class="owner-avatar">HS</div>
+              <div>
+                <div class="owner-name">Hamza S.</div>
+                <div class="owner-loc">Lahore, Johar Town</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Rental Request Form -->
+        <aside>
+          <div class="rental-request-box">
+            <div class="rental-request-box__rate">
+              <span class="rate-amount" id="itemDailyPrice">Rs. 500</span>
+              <span class="rate-period">/ day</span>
+            </div>
+
+            <div id="requestAlertContainer"></div>
+
+            <form id="rentalRequestForm" data-daily-price="500" novalidate>
+              <div class="form-group">
+                <label for="reqStartDate" class="form-label">
+                  Rental Start Date <span class="form-label__req">*</span>
+                </label>
+                <input type="date" id="reqStartDate" class="form-input" required>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="reqEndDate" class="form-label">
+                  Rental End Date <span class="form-label__req">*</span>
+                </label>
+                <input type="date" id="reqEndDate" class="form-input" required>
+                <div class="form-error"></div>
+              </div>
+
+              <!-- Cost Calculation Summary -->
+              <div class="calculation-summary">
+                <div class="calculation-row">
+                  <span>Daily Rate</span>
+                  <span>Rs. 500</span>
+                </div>
+                <div class="calculation-row">
+                  <span>Duration</span>
+                  <span id="calcDays">0 days</span>
+                </div>
+                <div class="calculation-row calculation-row--total">
+                  <span>Total</span>
+                  <span id="calcTotal">Rs. 0</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reqMessage" class="form-label">Message to Owner (Optional)</label>
+                <textarea id="reqMessage" class="form-textarea" placeholder="Introduce yourself and specify your preferred pickup time..."></textarea>
+                <div class="char-counter" id="messageCharCounter">0 / 500 characters</div>
+                <div class="form-error"></div>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--block">Send Borrow Request</button>
+
+              <p class="rental-notice">
+                No online payment. Settle payment directly with the owner upon acceptance.
+              </p>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/item.js"></script>
+</body>
+</html>

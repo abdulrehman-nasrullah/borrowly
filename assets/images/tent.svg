@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tentOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="tentSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D71920"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#F4F4F5"/>
+  <g transform="translate(150, 120)">
+    <!-- Ground Shadow -->
+    <ellipse cx="250" cy="380" rx="240" ry="24" fill="#E4E4E7"/>
+    <!-- Tent Dome Structure -->
+    <!-- Left Flap / Side -->
+    <path d="M 60 360 Q 180 180 250 100 L 250 360 Z" fill="url(#tentSide)"/>
+    <!-- Right Flap / Side -->
+    <path d="M 440 360 Q 320 180 250 100 L 250 360 Z" fill="url(#tentOrange)"/>
+    <!-- Tent Door (Mesh / Open) -->
+    <path d="M 170 360 Q 250 200 250 200 Q 250 200 330 360 Z" fill="#18181B"/>
+    <!-- Inner Tent Base -->
+    <polygon points="190,360 250,230 310,360" fill="#27272A"/>
+    <!-- Zipper line -->
+    <line x1="250" y1="200" x2="250" y2="360" stroke="#FACC15" stroke-width="2.5" stroke-dasharray="4,4"/>
+    <!-- Pole Arches -->
+    <path d="M 50 365 Q 250 80 450 365" fill="none" stroke="#E4E4E7" stroke-width="4"/>
+    <path d="M 120 375 Q 250 80 380 375" fill="none" stroke="#71717A" stroke-width="3"/>
+    <!-- Guy ropes & stakes -->
+    <line x1="60" y1="360" x2="20" y2="385" stroke="#71717A" stroke-width="2"/>
+    <circle cx="20" cy="385" r="3" fill="#D71920"/>
+    <line x1="440" y1="360" x2="480" y2="385" stroke="#71717A" stroke-width="2"/>
+    <circle cx="480" cy="385" r="3" fill="#D71920"/>
+    <!-- Vent top cap -->
+    <path d="M 210 130 Q 250 110 290 130 L 250 95 Z" fill="#18181B"/>
+    <text x="250" y="420" fill="#71717A" font-family="'Barlow Condensed', sans-serif" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">WATERPROOF 4-PERSON DOME</text>
+  </g>
+</svg>

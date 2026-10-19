@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="dashboard" data-auth="user">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="dashboard-page">
+    <div class="container">
+      <!-- User Summary Header -->
+      <section class="dashboard-header">
+        <div class="dashboard-user">
+          <div class="dashboard-user__avatar">ZM</div>
+          <div>
+            <h1 class="dashboard-user__name">Zainab M.</h1>
+            <div class="dashboard-user__loc">Multan, Gulgasht • Member since Oct 2026</div>
+          </div>
+        </div>
+        <a href="add-item.html" class="btn btn--primary">List an Item</a>
+      </section>
+
+      <!-- 3 Tabs Component -->
+      <div class="tabs">
+        <nav class="tabs-nav" aria-label="Dashboard views">
+          <button type="button" class="tab-btn is-active" data-tab="tab-listings">My Listings (1)</button>
+          <button type="button" class="tab-btn" data-tab="tab-requests">Borrow Requests (2)</button>
+          <button type="button" class="tab-btn" data-tab="tab-rentals">My Rentals (3)</button>
+        </nav>
+
+        <!-- Tab 1: My Listings -->
+        <section class="tab-panel is-active" id="tab-listings" aria-label="My Listings">
+          <div class="dashboard-list">
+            <!-- Listing 1 -->
+            <article class="dashboard-item-card">
+              <div class="dashboard-item-card__left">
+                <img src="assets/images/calculator.svg" alt="Casio fx-991EX Scientific Calculator" class="dashboard-item-card__img">
+                <div class="dashboard-item-card__info">
+                  <span class="card__category">Electronics and Calculators</span>
+                  <h3 class="dashboard-item-card__title">Casio fx-991EX Scientific Calculator</h3>
+                  <div class="dashboard-item-card__meta">
+                    <span class="badge badge--active listing-status-badge">Active</span>
+                    <span class="badge badge--condition">Like New</span>
+                    <span>Rs. 150 / day</span>
+                    <span>20 Oct - 30 Nov 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dashboard-item-card__actions">
+                <button type="button" class="btn btn--outline btn--sm btn-toggle-status">Deactivate</button>
+                <a href="edit-item.html" class="btn btn--secondary btn--sm">Edit Listing</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Tab 2: Borrow Requests (Requests received from others) -->
+        <section class="tab-panel" id="tab-requests" aria-label="Borrow Requests">
+          <div class="dashboard-list">
+            <!-- Request 1: Pending -->
+            <article class="dashboard-item-card dashboard-item-card--stacked request-card">
+              <div class="dashboard-item-card__top">
+                <div class="dashboard-item-card__left">
+                  <img src="assets/images/calculator.svg" alt="Casio fx-991EX Scientific Calculator" class="dashboard-item-card__img">
+                  <div class="dashboard-item-card__info">
+                    <span class="card__category">Electronics and Calculators</span>
+                    <h3 class="dashboard-item-card__title">Casio fx-991EX Scientific Calculator</h3>
+                    <div class="dashboard-item-card__meta">
+                      <span>Requester: <strong>Hamza S.</strong> (Lahore)</span>
+                      <span>Dates: 24 Oct - 28 Oct 2026 (5 days)</span>
+                      <span>Total: <strong>Rs. 750</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dashboard-item-card__status-wrap">
+                  <span class="badge badge--pending request-status-badge">Pending</span>
+                  <div class="request-actions">
+                    <button type="button" class="btn btn--primary btn--sm btn-accept">Accept</button>
+                    <button type="button" class="btn btn--outline btn--sm btn-reject">Reject</button>
+                  </div>
+                </div>
+              </div>
+
+              <p class="dashboard-item-card__message">
+                <em>"Hi Zainab, I need the calculator for an upcoming exam this weekend. Can pick up in Gulgasht."</em>
+              </p>
+
+              <!-- Green Direct Settlement Box (Appears ONLY after acceptance) -->
+              <div class="alert alert--settlement settlement-details settlement-details--hidden">
+                <strong>Request Accepted!</strong> Settle payment directly. Contact borrower at <strong>hamza.s@example.com</strong>.
+              </div>
+            </article>
+
+            <!-- Request 2: Already Accepted -->
+            <article class="dashboard-item-card dashboard-item-card--stacked request-card">
+              <div class="dashboard-item-card__top">
+                <div class="dashboard-item-card__left">
+                  <img src="assets/images/calculator.svg" alt="Casio fx-991EX Scientific Calculator" class="dashboard-item-card__img">
+                  <div class="dashboard-item-card__info">
+                    <span class="card__category">Electronics and Calculators</span>
+                    <h3 class="dashboard-item-card__title">Casio fx-991EX Scientific Calculator</h3>
+                    <div class="dashboard-item-card__meta">
+                      <span>Requester: <strong>Bilal R.</strong> (Multan)</span>
+                      <span>Dates: 10 Nov - 12 Nov 2026 (3 days)</span>
+                      <span>Total: <strong>Rs. 450</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dashboard-item-card__status-wrap">
+                  <span class="badge badge--accepted request-status-badge">Accepted</span>
+                </div>
+              </div>
+
+              <p class="dashboard-item-card__message">
+                <em>"Need the calculator for data structures lab calculations."</em>
+              </p>
+
+              <!-- Green Direct Settlement Box (Visible because Accepted) -->
+              <div class="alert alert--settlement settlement-details">
+                <strong>Request Accepted!</strong> Settle payment directly. Contact borrower at <strong>bilal.r@example.com</strong>.
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Tab 3: My Rentals (Requests sent by Zainab to others) -->
+        <section class="tab-panel" id="tab-rentals" aria-label="My Rentals">
+          <div class="dashboard-list">
+            <!-- Rental 1: Accepted -->
+            <article class="dashboard-item-card dashboard-item-card--stacked">
+              <div class="dashboard-item-card__top">
+                <div class="dashboard-item-card__left">
+                  <img src="assets/images/cordless-drill.svg" alt="DeWalt 20V Cordless Drill" class="dashboard-item-card__img">
+                  <div class="dashboard-item-card__info">
+                    <span class="card__category">Tools and Hardware</span>
+                    <h3 class="dashboard-item-card__title">DeWalt 20V Cordless Drill</h3>
+                    <div class="dashboard-item-card__meta">
+                      <span>Owner: <strong>Hamza S.</strong> (Lahore, Johar Town)</span>
+                      <span>Dates: 22 Oct - 25 Oct 2026 (4 days)</span>
+                      <span>Total: <strong>Rs. 2,000</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="badge badge--accepted">Accepted</span>
+              </div>
+
+              <!-- Green Direct Settlement Box (Visible because Accepted) -->
+              <div class="alert alert--settlement settlement-details">
+                <strong>Request Accepted!</strong> Settle payment directly. Contact owner at <strong>hamza.s@example.com</strong>.
+              </div>
+            </article>
+
+            <!-- Rental 2: Pending (NO email shown) -->
+            <article class="dashboard-item-card dashboard-item-card--stacked">
+              <div class="dashboard-item-card__top">
+                <div class="dashboard-item-card__left">
+                  <img src="assets/images/tent.svg" alt="4-Person Camping Tent" class="dashboard-item-card__img">
+                  <div class="dashboard-item-card__info">
+                    <span class="card__category">Sports and Outdoor</span>
+                    <h3 class="dashboard-item-card__title">4-Person Camping Tent</h3>
+                    <div class="dashboard-item-card__meta">
+                      <span>Owner: <strong>Usman T.</strong> (Islamabad, F-10)</span>
+                      <span>Dates: 05 Nov - 08 Nov 2026 (4 days)</span>
+                      <span>Total: <strong>Rs. 2,800</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="badge badge--pending">Pending</span>
+              </div>
+
+              <p class="dashboard-item-card__message--muted">
+                Waiting for Usman T. to review your dated request. Contact details will be unlocked once accepted.
+              </p>
+            </article>
+
+            <!-- Rental 3: Rejected (NO email shown) -->
+            <article class="dashboard-item-card dashboard-item-card--stacked">
+              <div class="dashboard-item-card__top">
+                <div class="dashboard-item-card__left">
+                  <img src="assets/images/speaker.svg" alt="Party Speaker 200W" class="dashboard-item-card__img">
+                  <div class="dashboard-item-card__info">
+                    <span class="card__category">Electronics and Calculators</span>
+                    <h3 class="dashboard-item-card__title">Party Speaker 200W</h3>
+                    <div class="dashboard-item-card__meta">
+                      <span>Owner: <strong>Sana R.</strong> (Lahore, DHA)</span>
+                      <span>Dates: 24 Oct - 25 Oct 2026 (2 days)</span>
+                      <span>Total: <strong>Rs. 1,200</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="badge badge--rejected">Rejected</span>
+              </div>
+
+              <p class="dashboard-item-card__message--rejected">
+                This request was declined by the owner.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

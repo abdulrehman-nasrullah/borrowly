@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#27272A"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A7B7A9"/>
+      <stop offset="100%" stop-color="#8E9F90"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#F4F4F5"/>
+  <rect x="250" y="60" width="300" height="480" rx="28" fill="url(#bg)" stroke="#3F3F46" stroke-width="4"/>
+  <!-- Solar panel & Logo -->
+  <rect x="290" y="90" width="80" height="24" rx="4" fill="#09090B"/>
+  <rect x="420" y="90" width="90" height="20" rx="3" fill="#382E1E" stroke="#52442B" stroke-width="2"/>
+  <text x="292" y="107" fill="#E4E4E7" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="1">CASIO</text>
+  <text x="292" y="128" fill="#A1A1AA" font-family="'Inter', sans-serif" font-size="9">fx-991EX CLASSWIZ</text>
+  <!-- LCD Screen -->
+  <rect x="285" y="136" width="230" height="74" rx="6" fill="url(#screen)" stroke="#18181B" stroke-width="3"/>
+  <text x="295" y="160" fill="#18241A" font-family="monospace" font-size="13" font-weight="600">f(x)=∫(3x²+2x)dx</text>
+  <text x="495" y="195" fill="#18241A" font-family="monospace" font-size="18" font-weight="700" text-anchor="end">x³ + x² + C</text>
+  <!-- Top functional buttons -->
+  <circle cx="310" cy="235" r="11" fill="#71717A"/>
+  <circle cx="350" cy="235" r="11" fill="#71717A"/>
+  <circle cx="450" cy="235" r="11" fill="#71717A"/>
+  <circle cx="490" cy="235" r="11" fill="#71717A"/>
+  <!-- D-Pad -->
+  <circle cx="400" cy="245" r="24" fill="#3F3F46" stroke="#52525B" stroke-width="2"/>
+  <circle cx="400" cy="245" r="10" fill="#18181B"/>
+  <!-- Keypad Grid -->
+  <!-- Row 1 -->
+  <rect x="285" y="280" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="333" y="280" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="382" y="280" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="431" y="280" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="479" y="280" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <!-- Row 2 -->
+  <rect x="285" y="312" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="333" y="312" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="382" y="312" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="431" y="312" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <rect x="479" y="312" width="36" height="20" rx="4" fill="#3F3F46"/>
+  <!-- Row 3: Numbers -->
+  <rect x="285" y="350" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="345" y="350" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="405" y="350" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="467" y="350" width="48" height="28" rx="4" fill="#D71920"/>
+  <!-- Row 4 -->
+  <rect x="285" y="390" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="345" y="390" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="405" y="390" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="467" y="390" width="48" height="28" rx="4" fill="#D71920"/>
+  <!-- Row 5 -->
+  <rect x="285" y="430" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="345" y="430" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="405" y="430" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="467" y="430" width="48" height="28" rx="4" fill="#3F3F46"/>
+  <!-- Row 6 -->
+  <rect x="285" y="470" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="345" y="470" width="48" height="28" rx="4" fill="#E4E4E7"/>
+  <rect x="405" y="470" width="48" height="28" rx="4" fill="#3F3F46"/>
+  <rect x="467" y="470" width="48" height="28" rx="4" fill="#3F3F46"/>
+  <!-- Keypad Labels -->
+  <text x="309" y="369" fill="#18181B" font-family="'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">7</text>
+  <text x="369" y="369" fill="#18181B" font-family="'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">8</text>
+  <text x="429" y="369" fill="#18181B" font-family="'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">9</text>
+  <text x="491" y="369" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">DEL</text>
+  <text x="309" y="409" fill="#18181B" font-family="'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">4</text>
+  <text x="369" y="409" fill="#18181B" font-family="'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">5</text>
+  <text x="429" y="409" fill="#18181B" font-family="'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">6</text>
+  <text x="491" y="409" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">AC</text>
+</svg>

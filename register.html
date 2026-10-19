@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="register" data-auth="guest">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-card__header">
+        <a href="index.html" class="brand-logo" aria-label="Borrowly Homepage">
+          BORROWLY<span class="brand-logo__dot">.</span>
+        </a>
+        <h1 class="auth-card__title">Create Account</h1>
+        <p class="auth-card__subtitle">Join Pakistan's peer-to-peer rental marketplace.</p>
+      </div>
+
+      <div id="registerAlertContainer"></div>
+
+      <form id="registerForm" novalidate>
+        <div class="form-group">
+          <label for="registerName" class="form-label">
+            Full Name <span class="form-label__req">*</span>
+          </label>
+          <input type="text" id="registerName" class="form-input" placeholder="e.g. Zainab M." required>
+          <div class="form-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="registerLocation" class="form-label">
+            Location <span class="form-label__req">*</span>
+          </label>
+          <input type="text" id="registerLocation" class="form-input" placeholder="e.g. Multan, Gulgasht" maxlength="150" required>
+          <div class="form-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="registerEmail" class="form-label">
+            Email Address <span class="form-label__req">*</span>
+          </label>
+          <input type="email" id="registerEmail" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+          <div class="form-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="registerPassword" class="form-label">
+            Password <span class="form-label__req">*</span>
+          </label>
+          <input type="password" id="registerPassword" class="form-input" placeholder="At least 8 characters" autocomplete="new-password" required>
+          <div class="form-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="registerConfirmPassword" class="form-label">
+            Confirm Password <span class="form-label__req">*</span>
+          </label>
+          <input type="password" id="registerConfirmPassword" class="form-input" placeholder="Re-enter your password" autocomplete="new-password" required>
+          <div class="form-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block">Create Account</button>
+      </form>
+
+      <div class="auth-card__footer">
+        Already have an account? <a href="login.html">Log in here</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

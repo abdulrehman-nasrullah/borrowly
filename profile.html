@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="profile" data-auth="user">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="form-page-layout">
+    <div class="container">
+      <div class="profile-grid">
+        <!-- Profile Summary Card -->
+        <aside>
+          <div class="profile-card">
+            <div class="profile-card__avatar">ZM</div>
+            <div>
+              <h2 class="profile-title">Zainab M.</h2>
+              <p class="profile-email">zainab.m@example.com</p>
+              <p class="profile-loc">Multan, Gulgasht</p>
+            </div>
+
+            <div class="profile-stats-row">
+              <div class="profile-stat-box">
+                <span class="profile-stat-val">1</span>
+                <span class="profile-stat-lbl">Listings</span>
+              </div>
+              <div class="profile-stat-box">
+                <span class="profile-stat-val">2</span>
+                <span class="profile-stat-lbl">Requests</span>
+              </div>
+              <div class="profile-stat-box">
+                <span class="profile-stat-val">3</span>
+                <span class="profile-stat-lbl">Rentals</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Edit Profile Form -->
+        <div>
+          <div class="form-card profile-form-card">
+            <div class="form-card__header">
+              <h2>Account Settings</h2>
+              <p class="section-header__subtitle">Manage your personal information and default location.</p>
+            </div>
+
+            <div id="profileAlertContainer"></div>
+
+            <form id="profileForm" novalidate>
+              <div class="form-group">
+                <label for="profileName" class="form-label">
+                  Full Name <span class="form-label__req">*</span>
+                </label>
+                <input type="text" id="profileName" class="form-input" value="Zainab M." required>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="profileEmail" class="form-label">
+                  Email Address <span class="form-label__req">*</span>
+                </label>
+                <input type="email" id="profileEmail" class="form-input" value="zainab.m@example.com" autocomplete="email" required>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="profileLocation" class="form-label">
+                  Location (City &amp; Area) <span class="form-label__req">*</span>
+                </label>
+                <input type="text" id="profileLocation" class="form-input" value="Multan, Gulgasht" maxlength="150" required>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-card__actions profile-form-actions">
+                <button type="submit" class="btn btn--primary">Save Profile Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

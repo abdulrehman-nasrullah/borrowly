@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="yellow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FACC15"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <linearGradient id="chuck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#52525B"/>
+      <stop offset="100%" stop-color="#27272A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#F4F4F5"/>
+  <g transform="translate(180, 100)">
+    <!-- Drill Bit -->
+    <polygon points="50,152 0,157 50,162" fill="#94A3B8"/>
+    <!-- Chuck -->
+    <rect x="50" y="140" width="55" height="34" rx="4" fill="url(#chuck)"/>
+    <rect x="105" y="132" width="45" height="50" rx="4" fill="#18181B"/>
+    <!-- Torque collar -->
+    <rect x="150" y="130" width="30" height="54" rx="2" fill="#D71920"/>
+    <!-- Main motor housing -->
+    <path d="M 180 120 L 360 120 Q 390 120 390 150 L 390 190 Q 390 210 360 210 L 260 210 L 260 330 Q 260 360 230 360 L 190 360 Q 170 360 170 330 L 180 200 L 180 120 Z" fill="url(#yellow)" stroke="#A16207" stroke-width="2"/>
+    <!-- Black rubber grips & accents -->
+    <path d="M 310 120 L 380 120 Q 390 120 390 150 L 390 180 Q 380 200 340 200 L 310 200 Z" fill="#18181B"/>
+    <!-- Handle rubber grip -->
+    <path d="M 210 240 L 250 240 L 250 330 L 210 330 Z" fill="#18181B" rx="8"/>
+    <!-- Trigger -->
+    <path d="M 162 215 Q 155 230 168 245 L 182 240 L 182 220 Z" fill="#D71920"/>
+    <!-- Battery Base -->
+    <rect x="150" y="350" width="140" height="48" rx="8" fill="#18181B"/>
+    <rect x="160" y="378" width="120" height="12" rx="3" fill="url(#yellow)"/>
+    <text x="220" y="370" fill="#E4E4E7" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">20V MAX</text>
+    <!-- Brand label -->
+    <text x="250" y="165" fill="#18181B" font-family="'Barlow Condensed', sans-serif" font-size="28" font-weight="800" font-style="italic">DEWALT</text>
+    <!-- Air vents -->
+    <line x1="330" y1="140" x2="370" y2="140" stroke="#71717A" stroke-width="3" stroke-linecap="round"/>
+    <line x1="330" y1="150" x2="370" y2="150" stroke="#71717A" stroke-width="3" stroke-linecap="round"/>
+    <line x1="330" y1="160" x2="370" y2="160" stroke="#71717A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

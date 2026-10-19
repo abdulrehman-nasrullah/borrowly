@@ -1,0 +1,865 @@
+/* ==========================================================================
+   Page-Specific Layouts & Styles - Borrowly
+   ========================================================================== */
+
+/* ---------------------------------------------------------
+   1. Home & Browse Page (index.html)
+   --------------------------------------------------------- */
+.hero {
+  background-color: var(--color-black);
+  color: var(--color-bg-white);
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--color-dark-elevated);
+  position: relative;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: var(--color-dark-elevated);
+  border: 1px solid #3F3F46;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #E4E4E7;
+  margin-bottom: 1.5rem;
+}
+
+.hero__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  line-height: 1.05;
+  color: var(--color-bg-white);
+  margin-bottom: 1.25rem;
+}
+
+.hero__title-accent {
+  color: var(--color-primary);
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #A1A1AA;
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 4rem 0;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header__subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step-card {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.step-card__number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.step-card__title {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.step-card__text {
+  font-size: 0.95rem;
+  color: #52525B;
+  line-height: 1.6;
+}
+
+/* Browse Section */
+.browse-section {
+  padding: 3.5rem 0 5rem;
+}
+
+.browse-controls {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.browse-search-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input-wrap {
+  flex: 1 1 300px;
+  position: relative;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-muted);
+}
+
+.search-input-wrap input {
+  padding-left: 2.4rem;
+}
+
+.category-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-pill {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover {
+  background-color: #E4E4E7;
+}
+
+.filter-pill.is-active {
+  background-color: var(--color-black);
+  color: var(--color-bg-white);
+  border-color: var(--color-black);
+}
+
+/* Item Grid Responsive (4 / 2 / 1) */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.browse-results-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.results-count {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ---------------------------------------------------------
+   2. Single Item Detail Page (item.html)
+   --------------------------------------------------------- */
+.item-page {
+  padding: 2.5rem 0 5rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.item-layout {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.item-gallery {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.item-gallery__main {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.item-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-title {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.item-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: #3F3F46;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.meta-pill svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-muted);
+}
+
+.item-description {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+.item-description h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.item-description p {
+  color: #3F3F46;
+  line-height: 1.7;
+}
+
+.owner-info-box {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.owner-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  color: var(--color-bg-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owner-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.owner-loc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Booking Request Card Sticky */
+.rental-request-box {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 92px;
+}
+
+.rental-request-box__rate {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rate-amount {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.rate-period {
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.calculation-summary {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.calculation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  color: #52525B;
+}
+
+.calculation-row--total {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.rental-notice {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   3. Dashboard Page (dashboard.html)
+   --------------------------------------------------------- */
+.dashboard-page {
+  padding: 2.5rem 0 5rem;
+}
+
+.dashboard-header {
+  background-color: var(--color-black);
+  color: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.dashboard-user__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-bg-white);
+}
+
+.dashboard-user__name {
+  font-size: 1.75rem;
+  color: var(--color-bg-white);
+  margin-bottom: 0.15rem;
+}
+
+.dashboard-user__loc {
+  font-size: 0.9rem;
+  color: #A1A1AA;
+}
+
+/* Dashboard List Items & Tables */
+.dashboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-item-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.dashboard-item-card__left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.dashboard-item-card__img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background-color: #E4E4E7;
+}
+
+.dashboard-item-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dashboard-item-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dashboard-item-card__meta {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-item-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.empty-state {
+  background-color: var(--color-bg-white);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 3.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-state__title {
+  font-size: 1.5rem;
+}
+
+.empty-state__text {
+  color: var(--color-muted);
+  max-width: 400px;
+}
+
+/* ---------------------------------------------------------
+   4. Auth Pages (login.html, register.html)
+   --------------------------------------------------------- */
+.auth-page {
+  padding: 4rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.auth-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem 2rem;
+}
+
+.auth-card__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-card__title {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.auth-card__subtitle {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
+.auth-card__footer {
+  text-align: center;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.auth-card__footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   5. Form Pages (add-item.html, edit-item.html, profile.html)
+   --------------------------------------------------------- */
+.form-page-layout {
+  padding: 3rem 0 5rem;
+}
+
+.form-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.form-card__header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Profile Details */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 2rem;
+}
+
+.profile-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+.profile-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-stat-val {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-black);
+}
+
+.profile-stat-lbl {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+/* Dashboard Card Variations & Elements */
+.dashboard-item-card--stacked {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dashboard-item-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-item-card__status-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-item-card__message {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  color: #52525B;
+}
+
+.dashboard-item-card__message--muted {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.dashboard-item-card__message--rejected {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--status-rejected-text);
+}
+
+.settlement-details {
+  margin-top: 1rem;
+}
+
+.settlement-details--hidden {
+  display: none;
+}
+
+.empty-state--browse {
+  display: none;
+  margin-top: 2rem;
+}
+
+/* Profile specific styles */
+.profile-title {
+  font-size: 1.75rem;
+}
+
+.profile-email {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.profile-loc {
+  color: #52525B;
+  font-size: 0.88rem;
+  margin-top: 0.25rem;
+}
+
+.profile-form-card {
+  max-width: 100%;
+  padding: 2rem;
+}
+
+.profile-form-actions {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+/* ---------------------------------------------------------
+   6. Responsive Grid & Breakpoints (1440 / 834 / 390)
+   --------------------------------------------------------- */
+/* Tablet (approx 834px) */
+@media (max-width: 1023px) {
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .item-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-request-box {
+    position: static;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile (approx 390px) */
+@media (max-width: 639px) {
+  .hero__title {
+    font-size: 2.4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+
+  .dashboard-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-item-card__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

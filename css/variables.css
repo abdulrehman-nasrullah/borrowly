@@ -1,0 +1,60 @@
+/* ==========================================================================
+   CSS Variables & Design Tokens - Borrowly Marketplace
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --color-primary: #D71920;
+  --color-primary-hover: #B5141A;
+  --color-primary-light: #FEE2E2;
+
+  /* Neutral Colors */
+  --color-black: #0B0B0C;
+  --color-dark: #18181B;
+  --color-dark-elevated: #27272A;
+  --color-muted: #71717A;
+  --color-border: #E4E4E7;
+  --color-border-dark: #27272A;
+  --color-bg-light: #F4F4F5;
+  --color-bg-white: #FFFFFF;
+
+  /* Status Colors */
+  --status-pending-bg: #FEF3C7;
+  --status-pending-text: #92400E;
+  --status-pending-border: #FCD34D;
+
+  --status-accepted-bg: #DCFCE7;
+  --status-accepted-text: #166534;
+  --status-accepted-border: #86EFAC;
+
+  --status-rejected-bg: #FEE2E2;
+  --status-rejected-text: #991B1B;
+  --status-rejected-border: #FCA5A5;
+
+  --status-active-bg: #ECFDF5;
+  --status-active-text: #065F46;
+  --status-active-border: #A7F3D0;
+
+  --status-inactive-bg: #F4F4F5;
+  --status-inactive-text: #52525B;
+  --status-inactive-border: #D4D4D8;
+
+  /* Typography */
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Sizing & Spacing */
+  --container-max-width: 1280px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --tap-target-min: 44px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}

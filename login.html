@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="login" data-auth="guest">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-card__header">
+        <a href="index.html" class="brand-logo" aria-label="Borrowly Homepage">
+          BORROWLY<span class="brand-logo__dot">.</span>
+        </a>
+        <h1 class="auth-card__title">Welcome Back</h1>
+        <p class="auth-card__subtitle">Log in to manage your listings and rental requests.</p>
+      </div>
+
+      <div id="loginAlertContainer"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginEmail" class="form-label">
+            Email Address <span class="form-label__req">*</span>
+          </label>
+          <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+          <div class="form-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword" class="form-label">
+            Password <span class="form-label__req">*</span>
+          </label>
+          <input type="password" id="loginPassword" class="form-input" placeholder="At least 8 characters" autocomplete="current-password" required>
+          <div class="form-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block">Log In</button>
+      </form>
+
+      <div class="auth-card__footer">
+        Don't have an account? <a href="register.html">Register here</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

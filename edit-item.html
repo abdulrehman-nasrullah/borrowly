@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Item - Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="edit-item" data-auth="user">
+
+  <!-- Shared Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="form-page-layout">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-card__header">
+          <h1>Edit Item Listing</h1>
+          <p class="section-header__subtitle">
+            Update your item information, rental rate, or available date range.
+          </p>
+        </div>
+
+        <div id="itemAlertContainer"></div>
+
+        <form id="itemForm" data-mode="edit" novalidate>
+          <!-- Item Title -->
+          <div class="form-group">
+            <label for="itemTitle" class="form-label">
+              Item Title <span class="form-label__req">*</span>
+            </label>
+            <input type="text" id="itemTitle" class="form-input" value="Casio fx-991EX Scientific Calculator" maxlength="150" required>
+            <div class="char-counter" id="titleCharCounter">37 / 150 characters</div>
+            <div class="form-error"></div>
+          </div>
+
+          <!-- Category & Condition Row -->
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="itemCategory" class="form-label">
+                Category <span class="form-label__req">*</span>
+              </label>
+              <select id="itemCategory" class="form-select" required>
+                <option value="">Select a Category</option>
+                <option value="Electronics and Calculators" selected>Electronics and Calculators</option>
+                <option value="Books and Study Material">Books and Study Material</option>
+                <option value="Tools and Hardware">Tools and Hardware</option>
+                <option value="Kitchen and Home">Kitchen and Home</option>
+                <option value="Sports and Outdoor">Sports and Outdoor</option>
+                <option value="Clothing and Accessories">Clothing and Accessories</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="itemCondition" class="form-label">
+                Condition <span class="form-label__req">*</span>
+              </label>
+              <select id="itemCondition" class="form-select" required>
+                <option value="">Select Condition</option>
+                <option value="New">New</option>
+                <option value="Like New" selected>Like New</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+              </select>
+              <div class="form-error"></div>
+            </div>
+          </div>
+
+          <!-- Daily Price & Location Row -->
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="itemPrice" class="form-label">
+                Daily Price (PKR) <span class="form-label__req">*</span>
+              </label>
+              <input type="number" id="itemPrice" class="form-input" value="150" min="1" step="1" required>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="itemLocation" class="form-label">
+                Location <span class="form-label__req">*</span>
+              </label>
+              <input type="text" id="itemLocation" class="form-input" value="Multan, Gulgasht" maxlength="150" required>
+              <div class="form-error"></div>
+            </div>
+          </div>
+
+          <!-- Availability Dates Row -->
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="itemFromDate" class="form-label">
+                Available From <span class="form-label__req">*</span>
+              </label>
+              <input type="date" id="itemFromDate" class="form-input" value="2026-10-20" required>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="itemUntilDate" class="form-label">
+                Available Until <span class="form-label__req">*</span>
+              </label>
+              <input type="date" id="itemUntilDate" class="form-input" value="2026-11-30" required>
+              <div class="form-error"></div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="itemDescription" class="form-label">Description (Optional)</label>
+            <textarea id="itemDescription" class="form-textarea" maxlength="500">Original Casio ClassWiz fx-991EX high-resolution solar calculator. Includes slide-on hard case, matrix calculations, and spreadsheet functions. In like-new condition.</textarea>
+            <div class="char-counter" id="descCharCounter">167 / 500 characters</div>
+            <div class="form-error"></div>
+          </div>
+
+          <div class="form-card__actions">
+            <a href="dashboard.html" class="btn btn--outline">Cancel</a>
+            <button type="submit" class="btn btn--primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer Injection Point -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/layout.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
